@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Styles -->
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font: normal 16px/20px sans-serif;
+    }
+
+    .clearfix:after {
+    	display: block;
+    	clear: both;
+    	content: " ";
+    	height: 0;
+	    visibility: hidden;
+  	}
+
+    section {
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 100vw;
+    }
+
+    .parallax-container {
+      height: 100%;
+      margin: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 0;
+      perspective: 1px;
+      position: relative;
+      transform-style: preserve-3d;
+      width: 100%;
+    }
+
+    .parallax-content {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateZ(-1px) scale(3);
+    }
+
+    .parallax-content.image {
+      background-image: url('/assets/OEM-a1.jpg');
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    .content {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+      color: white;
+      height: auto;
+      margin: 0;
+      padding: 0 5vw 5rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .content a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .content a:hover {
+      text-decoration: underline;
+    }
+
+    .content h2 {
+      font-size: 5rem;
+      line-height: 7rem;
+      margin: 0;
+    }
+
+    .content span {
+      font-size: 3.5rem;
+      line-height: 5rem;
+    }
+
+    .content-container {
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 69%, rgba(212, 212, 212, 1) 100%);
+      box-sizing: border-box;
+      height: 100vh;
+      margin: 0;
+      padding: 0 10vw;
+      width: 100%;
+    }
+
+    .content-inner {
+      box-sizing: border-box;
+      float: left;
+      margin: 0;
+      width: 50%;
+    }
+
+    .content-inner.image {
+      background: url('/assets/kitten.jpg');
+      background-blend-mode: multiply;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+    }
+
+    .content-inner h3 {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+
+    .content-inner span {
+      font-size: 1rem;
+      line-height: 2.5rem;
+    }
+
+    .content-inner a {
+      color: skyblue;
+      display: block;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      text-decoration: none;
+    }
+
+    .content-inner a:hover {
+      text-decoration: underline;
+    }
+
+    .content-inner a:after {
+      color: skyblue;
+      content: '>';
+      display: inline-block;
+      margin-left: .5rem;
+    }
+    </style>
+    <!-- End of Styles -->
+  </head>
+  <body>
+    <section>
+      <div class="parallax-container">
+          <div class="parallax-content image"></div>
+      </div>
+      <div class="content">
+        <a href="#">
+          <h2>Asset Title</h2>
+          <span>Subheading</span>
+        </a>
+      </div>
+    </section>
+    <section class="content-container clearfix">
+      <div class="content-inner image"></div>
+      <div class="content-inner">
+        <h3>Content Title</h3>
+        <span>Blurb outlining details of content which will entice user to follow CTA.</span>
+        <a href="#">Link to content</a>
+      </div>
+    </section>
+  </body>
+  </html>
