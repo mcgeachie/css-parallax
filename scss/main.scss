@@ -34,7 +34,7 @@ section {
 }
 
 .parallax-container .image {
-  background-image: url('/assets/OEM-a1.jpg');
+  background-image: url('/images/OEM-a1.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -119,7 +119,7 @@ section {
 .content-container .image {
   background: {
     blend-mode: multiply;
-    image: url('/assets/kitten.jpg');
+    image: url('/images/kitten.jpg');
     position: center;
     repeat: no-repeat;
     size: contain;
