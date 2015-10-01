@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CSS Parallax</title>
+    <meta name="description" content="Pure CSS Parallax">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
+    <style>
+    .parallax-container {
+      height: 150%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      perspective: 1px;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    .parallax-layer {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateZ(-1px) scale(2);
+    }
+
+    .fixed-content {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+    }
+    </style>
+    <!-- End of Styles -->
+  </head>
+  <body>
+    <section>
+      <div class="parallax-container">
+        <div class="parallax-group">
+            <div class="parallax-layer image"></div>
+        </div>
+      </div>
+      <div class="fixed-content content">
+        <a href="#">
+          <h2>Asset Title</h2>
+          <span>Subheading</span>
+        </a>
+      </div>
+    </section>
+    <section class="content-container">
+      <div class="content-inner image"></div>
+      <div class="content-inner table">
+        <div class="vertical-center">
+          <h3>Content Title</h3>
+          <span>Lorizzle boom shackalack dolor hizzle amet, adipiscing elit. Bling bling dope uhuh ... yih!, aliquet volutpizzle, rizzle quis, fizzle i'm in the shizzle, arcu. Pellentesque fizzle tortizzle. Sed erizzle. Dizzle at dolor phat turpis tempizzle we gonna chung. Maurizzle pellentesque gangsta fizzle turpizzle. Izzle tortor. Pellentesque i saw beyonces tizzles and my pizzle went crizzle rhoncizzle mammasay mammasa mamma oo sa.</span>
+          <a href="#">Link to content</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="parallax-container">
+        <div class="parallax-group">
+            <div class="parallax-layer image"></div>
+        </div>
+      </div>
+      <div class="fixed-content content">
+        <a href="#">
+          <h2>Asset Title</h2>
+          <span>Subheading</span>
+        </a>
+      </div>
+    </section>
+    <section class="content-container">
+      <div class="content-inner image"></div>
+      <div class="content-inner table">
+        <div class="vertical-center">
+          <h3>Content Title</h3>
+          <span>Lorizzle boom shackalack dolor hizzle amet, adipiscing elit. Bling bling dope uhuh ... yih!, aliquet volutpizzle, rizzle quis, fizzle i'm in the shizzle, arcu. Pellentesque fizzle tortizzle. Sed erizzle. Dizzle at dolor phat turpis tempizzle we gonna chung. Maurizzle pellentesque gangsta fizzle turpizzle. Izzle tortor. Pellentesque i saw beyonces tizzles and my pizzle went crizzle rhoncizzle mammasay mammasa mamma oo sa.</span>
+          <a href="#">Link to content</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="parallax-container">
+        <div class="parallax-group">
+            <div class="parallax-layer image"></div>
+        </div>
+      </div>
+      <div class="fixed-content content">
+        <a href="#">
+          <h2>Asset Title</h2>
+          <span>Subheading</span>
+        </a>
+      </div>
+    </section>
+    <section class="content-container">
+      <div class="content-inner image"></div>
+      <div class="content-inner table">
+        <div class="vertical-center">
+          <h3>Content Title</h3>
+          <span>Lorizzle boom shackalack dolor hizzle amet, adipiscing elit. Bling bling dope uhuh ... yih!, aliquet volutpizzle, rizzle quis, fizzle i'm in the shizzle, arcu. Pellentesque fizzle tortizzle. Sed erizzle. Dizzle at dolor phat turpis tempizzle we gonna chung. Maurizzle pellentesque gangsta fizzle turpizzle. Izzle tortor. Pellentesque i saw beyonces tizzles and my pizzle went crizzle rhoncizzle mammasay mammasa mamma oo sa.</span>
+          <a href="#">Link to content</a>
+        </div>
+      </div>
+    </section>
+  </body>
+  </html>

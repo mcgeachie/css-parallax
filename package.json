@@ -1,0 +1,32 @@
+{
+  "name": "css-parallax",
+  "version": "0.0.1",
+  "description": "An experiment into achieving a specific parallax effect with pure CSS",
+  "main": "dist/index.html",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss dist/css/main.css",
+    "server": "http-server -c-1 -p 8000 dist",
+    "start": "npm run watch-css & npm run server",
+    "test": "n/a",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcgeachie/css-parallax.git"
+  },
+  "keywords": [
+    "CSS",
+    "parallax"
+  ],
+  "author": "B McGeachie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcgeachie/css-parallax/issues"
+  },
+  "homepage": "https://github.com/mcgeachie/css-parallax#readme",
+  "devDependencies": {
+    "http-server": "^0.8.5",
+    "node-sass": "^3.3.3",
+    "nodemon": "^1.7.1"
+  }
+}
