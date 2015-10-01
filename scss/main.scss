@@ -4,12 +4,14 @@ body {
   font: normal 16px/20px sans-serif;
 }
 
-.clearfix:after {
-  display: block;
-  clear: both;
-  content: " ";
-  height: 0;
-  visibility: hidden;
+@mixin clearfix {
+  &:after {
+    display: block;
+    clear: both;
+    content: " ";
+    height: 0;
+    visibility: hidden;
+  }
 }
 
 .table {
@@ -43,26 +45,26 @@ section {
   height: auto;
   margin: 0;
   padding: 0 5vw 5rem;
-}
 
-.content a {
-  color: white;
-  text-decoration: none;
-}
+  a {
+    color: white;
+    text-decoration: none;
 
-.content a:hover {
-  text-decoration: underline;
-}
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
-.content h2 {
-  font-size: 5rem;
-  line-height: 7rem;
-  margin: 0;
-}
+  h2 {
+    font-size: 5rem;
+    line-height: 7rem;
+    margin: 0;
+  }
 
-.content span {
-  font-size: 3.5rem;
-  line-height: 5rem;
+  span {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
 }
 
 .content-container {
@@ -72,6 +74,39 @@ section {
   margin: 0;
   padding: 0 10vw;
   width: 100%;
+
+  @include clearfix;
+
+  a {
+   color: skyblue;
+   display: block;
+   font-size: 1.5rem;
+   line-height: 3rem;
+   text-decoration: none;
+
+   &:hover {
+     text-decoration: underline;
+   }
+
+   &:after {
+     color: skyblue;
+     content: '>';
+     display: inline-block;
+     font-size: .8rem;
+     margin-left: .5rem;
+   }
+ }
+
+  h3 {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: .25em;
+  }
+
+  span {
+    font-size: 1rem;
+    line-height: 2.5rem;
+  }
 }
 
 .content-inner {
@@ -82,41 +117,12 @@ section {
 }
 
 .content-container .image {
-  background: url('/assets/kitten.jpg');
-  background-blend-mode: multiply;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: {
+    blend-mode: multiply;
+    image: url('/assets/kitten.jpg');
+    position: center;
+    repeat: no-repeat;
+    size: contain;
+  }
   height: 100%;
-}
-
-.content-container h3 {
-  font-size: 4rem;
-  line-height: 5rem;
-  margin-bottom: .25em;
-}
-
-.content--container span {
-  font-size: 1rem;
-  line-height: 2.5rem;
-}
-
-.content-container a {
-  color: skyblue;
-  display: block;
-  font-size: 1.5rem;
-  line-height: 3rem;
-  text-decoration: none;
-}
-
-.content-container a:hover {
-  text-decoration: underline;
-}
-
-.content-container a:after {
-  color: skyblue;
-  content: '>';
-  display: inline-block;
-  font-size: .8rem;
-  margin-left: .5rem;
 }
