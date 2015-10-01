@@ -1,3 +1,16 @@
+@import 'backgrounds';
+@import 'parallax';
+
+@mixin section {
+  display: block;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+$white: rgba(255, 255, 255, 1);
+$skyblue: rgba(0, 114, 201, 1);
+
 body {
   margin: 0;
   padding: 0;
@@ -14,115 +27,199 @@ body {
   }
 }
 
-.table {
-  display: table;
-  height: 100%;
-}
-
-.vertical-center {
-  display: table-cell;
-  vertical-align: middle;
+.main-content {
+  @include parallax-container;
 }
 
 section {
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  width: 100vw;
+  @include parallax-group;
 }
 
-.parallax-container .image {
-  background-image: url('/images/OEM-a1.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
+.content-box {
+  @include radial-grey;
 }
 
-.content {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  color: white;
-  height: auto;
-  margin: 0;
-  padding: 0 5vw 5rem;
+.image-layer {
+  @include parallax-layer;
+  @include parallax-background;
+  @include motorcycle;
+}
 
-  a {
-    color: white;
-    text-decoration: none;
+.content-layer {
+  @include parallax-layer;
+  @include parallax-base;
+}
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.link {
+  @include section;
+  @include shadow-gradient;
+
+  a {}
 
   h2 {
-    font-size: 5rem;
-    line-height: 7rem;
     margin: 0;
   }
 
-  span {
-    font-size: 3.5rem;
-    line-height: 5rem;
-  }
+  span {}
 }
 
-.content-container {
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 69%, rgba(212, 212, 212, 1) 100%);
-  box-sizing: border-box;
-  height: 100vh;
-  margin: 0;
-  padding: 0 10vw;
-  width: 100%;
-
-  @include clearfix;
-
-  a {
-   color: skyblue;
-   display: block;
-   font-size: 1.5rem;
-   line-height: 3rem;
-   text-decoration: none;
-
-   &:hover {
-     text-decoration: underline;
-   }
-
-   &:after {
-     color: skyblue;
-     content: '>';
-     display: inline-block;
-     font-size: .8rem;
-     margin-left: .5rem;
-   }
- }
-
-  h3 {
-    font-size: 4rem;
-    line-height: 5rem;
-    margin-bottom: .25em;
-  }
-
-  span {
-    font-size: 1rem;
-    line-height: 2.5rem;
-  }
+.content {
+  @include section;
+  @include radial-grey;
 }
 
-.content-inner {
-  box-sizing: border-box;
-  float: left;
-  margin: 0;
-  width: 50%;
-}
 
-.content-container .image {
-  background: {
-    blend-mode: multiply;
-    image: url('/images/kitten.jpg');
-    position: center;
-    repeat: no-repeat;
-    size: contain;
-  }
-  height: 100%;
-}
+
+// .table {
+//   display: table;
+//   height: 100%;
+// }
+//
+// .vertical-center {
+//   display: table-cell;
+//   vertical-align: middle;
+// }
+//
+// section {
+//   height: 100vh;
+//   margin: 0;
+//   overflow: hidden;
+//   padding: 0;
+//   position: relative;
+//   width: 100vw;
+// }
+//
+// .parallax-container .image {
+//   background-image: url('images/OEM-a1.jpg');
+//   background-position: 50% 50%;
+//   background-size: cover;
+// }
+//
+// .content {
+//   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+//   color: $white;
+//   height: auto;
+//   margin: 0;
+//   padding: 0 5vw 5rem;
+//
+//   a {
+//     color: $white;
+//     text-decoration: none;
+//
+//     a:hover {
+//       text-decoration: underline;
+//     }
+//   }
+//
+//   h2 {
+//     font-size: 5rem;
+//     line-height: 7rem;
+//     margin: 0;
+//   }
+//
+//   span {
+//     font-size: 3.5rem;
+//     line-height: 5rem;
+//   }
+// }
+//
+// .content-container {
+//   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 69%, rgba(212, 212, 212, 1) 100%);
+//   box-sizing: border-box;
+//   height: 100vh;
+//   margin: 0;
+//   padding: 0 10vw;
+//   width: 100%;
+//
+//   a {
+//     color: $skyblue;
+//     display: block;
+//     font-size: 1.5rem;
+//     line-height: 3rem;
+//     text-decoration: none;
+//
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//
+//     &:after {
+//       color: $skyblue;
+//       content: '>';
+//       display: inline-block;
+//       font-size: .8rem;
+//       margin-left: .5rem;
+//     }
+//   }
+//
+//   h3 {
+//     font-size: 4rem;
+//     line-height: 5rem;
+//     margin-bottom: .25em;
+//   }
+//
+//   span {
+//     font-size: 1rem;
+//     line-height: 2.5rem;
+//   }
+//
+//   .image {
+//     background: {
+//       blend-mode: multiply;
+//       image: url('kitten.jpg');
+//       position: center;
+//       repeat: no-repeat;
+//       size: contain;
+//     }
+//     height: 100%;
+//   }
+// }
+//
+// .content-inner {
+//   box-sizing: border-box;
+//   float: left;
+//   margin: 0;
+//   width: 50%;
+// }
+
+
+
+
+
+
+
+
+
+    .parallax-content {
+      height: 50vh;
+    }
+    .content-wrapper {
+      z-index: 5;
+    }
+    .billboard-wrapper {
+      z-index: 1;
+    }
+    .link-layer {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, .6) 100%);
+    }
+    .link-layer a {
+      color: white;
+      text-decoration: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-sizing: border-box;
+      padding: 0 5vw 5vh;
+    }
+    .link-layer a:hover {
+      text-decoration: underline;
+    }
+    .link-layer h2 {
+      font-size: 5rem;
+      line-height: 7rem;
+      margin: 0;
+    }
+    .link-layer span {
+      font-size: 3.5rem;
+      line-height: 5rem;
+    }
