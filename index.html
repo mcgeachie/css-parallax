@@ -9,17 +9,25 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/styles.css" media="screen" charset="utf-8">
+    <!-- <link rel="stylesheet" href="assets/styles.css" media="screen" charset="utf-8"> -->
     <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font: normal 16px/20px sans-serif;
+    }
+
     .parallax-container {
-      height: 150%;
+      height: 100vh;
       overflow-x: hidden;
       overflow-y: auto;
       perspective: 1px;
+      perspective-origin-x: 100%;
     }
 
-    .parallax-inner {
-      height: 100%;
+    .parallax-group {
+      height: 100vh;
       position: relative;
       transform-style: preserve-3d;
     }
@@ -27,90 +35,104 @@
     .parallax-layer {
       bottom: 0;
       left: 0;
+      transform-origin-x: 100%;
       position: absolute;
       right: 0;
       top: 0;
+    }
+
+    .parallax-base {
+      transform: translateZ(0);
+    }
+
+    .parallax-back {
       transform: translateZ(-1px) scale(2);
     }
 
-    .fixed-content {
+    .parallax-content {
+      height: 50vh;
+    }
+
+    .content-wrapper {
+      z-index: 5;
+    }
+
+    .billboard-wrapper {
+      z-index: 1;
+    }
+
+    .content-box {
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 69%, rgba(212, 212, 212, 1) 100%);
+    }
+
+    .link-layer {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, .6) 100%);
+    }
+
+    .link-layer a {
+      color: white;
+      text-decoration: none;
+
+      position: absolute;
       bottom: 0;
       left: 0;
-      position: absolute;
       right: 0;
+      box-sizing: border-box;
+      padding: 0 5vw 5vh;
+    }
+
+    .link-layer a:hover {
+      text-decoration: underline;
+    }
+
+    .link-layer h2 {
+      font-size: 5rem;
+      line-height: 7rem;
+      margin: 0;
+    }
+
+    .link-layer span {
+      font-size: 3.5rem;
+      line-height: 5rem;
+    }
+
+    .image-layer {
+      height: 150%;
+      background: url('assets/OEM-a1.jpg');
+      background-position: 50% 50%;
+      background-size: cover;
     }
     </style>
     <!-- End of Styles -->
   </head>
   <body>
-    <section>
-      <div class="parallax-container">
-          <div class="parallax-inner">
-            <div class="parallax-layer image"></div>
+    <div class="parallax-container">
+      <div class="parallax-group content-wrapper">
+        <div class="parallax-layer parallax-base content-box"></div>
+      </div>
+      <div class="parallax-group billboard-wrapper">
+        <div class="parallax-layer parallax-back image-layer"></div>
+        <div class="parallax-layer parallax-base link-layer">
+          <div class="parallax-content link-layer">
+            <a href="#">
+              <h2>Asset Title</h2>
+              <span>Subheading</span>
+            </a>
           </div>
-      </div>
-      <div class="fixed-content content">
-        <a href="#">
-          <h2>Asset Title</h2>
-          <span>Subheading</span>
-        </a>
-      </div>
-    </section>
-    <section class="content-container clearfix">
-      <div class="content-inner image"></div>
-      <div class="content-inner table">
-        <div class="vertical-center">
-          <h3>Content Title</h3>
-          <span>Lorizzle boom shackalack dolor hizzle amet, adipiscing elit. Bling bling dope uhuh ... yih!, aliquet volutpizzle, rizzle quis, fizzle i'm in the shizzle, arcu. Pellentesque fizzle tortizzle. Sed erizzle. Dizzle at dolor phat turpis tempizzle we gonna chung. Maurizzle pellentesque gangsta fizzle turpizzle. Izzle tortor. Pellentesque i saw beyonces tizzles and my pizzle went crizzle rhoncizzle mammasay mammasa mamma oo sa.</span>
-          <a href="#">Link to content</a>
+          <div class="parallax-content content-box"></div>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="parallax-container">
-          <div class="parallax-inner">
-            <div class="parallax-layer image"></div>
+      <div class="parallax-group billboard-wrapper">
+        <div class="parallax-layer parallax-back image-layer"></div>
+        <div class="parallax-layer parallax-base link-layer">
+          <div class="parallax-content link-layer">
+            <a href="#">
+              <h2>Asset Title</h2>
+              <span>Subheading</span>
+            </a>
           </div>
-      </div>
-      <div class="fixed-content content">
-        <a href="#">
-          <h2>Asset Title</h2>
-          <span>Subheading</span>
-        </a>
-      </div>
-    </section>
-    <section class="content-container clearfix">
-      <div class="content-inner image"></div>
-      <div class="content-inner table">
-        <div class="vertical-center">
-          <h3>Content Title</h3>
-          <span>Lorizzle boom shackalack dolor hizzle amet, adipiscing elit. Bling bling dope uhuh ... yih!, aliquet volutpizzle, rizzle quis, fizzle i'm in the shizzle, arcu. Pellentesque fizzle tortizzle. Sed erizzle. Dizzle at dolor phat turpis tempizzle we gonna chung. Maurizzle pellentesque gangsta fizzle turpizzle. Izzle tortor. Pellentesque i saw beyonces tizzles and my pizzle went crizzle rhoncizzle mammasay mammasa mamma oo sa.</span>
-          <a href="#">Link to content</a>
+          <div class="parallax-content content-box"></div>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="parallax-container">
-          <div class="parallax-inner">
-            <div class="parallax-layer image"></div>
-          </div>
-      </div>
-      <div class="fixed-content content">
-        <a href="#">
-          <h2>Asset Title</h2>
-          <span>Subheading</span>
-        </a>
-      </div>
-    </section>
-    <section class="content-container clearfix">
-      <div class="content-inner image"></div>
-      <div class="content-inner table">
-        <div class="vertical-center">
-          <h3>Content Title</h3>
-          <span>Lorizzle boom shackalack dolor hizzle amet, adipiscing elit. Bling bling dope uhuh ... yih!, aliquet volutpizzle, rizzle quis, fizzle i'm in the shizzle, arcu. Pellentesque fizzle tortizzle. Sed erizzle. Dizzle at dolor phat turpis tempizzle we gonna chung. Maurizzle pellentesque gangsta fizzle turpizzle. Izzle tortor. Pellentesque i saw beyonces tizzles and my pizzle went crizzle rhoncizzle mammasay mammasa mamma oo sa.</span>
-          <a href="#">Link to content</a>
-        </div>
-      </div>
-    </section>
   </body>
   </html>
